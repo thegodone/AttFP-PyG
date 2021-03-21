@@ -6,6 +6,11 @@ the code is under dev
 
 One major difference to the original code is the inital atom / bond UpProject (encoder)
 
+I suspect that the error is in the atom softmax method that need to be per atom and not per molecule:
+something like this may work ?
+avu = EdgePooling.compute_edge_score_softmax(evu, edge_index[0], x_i.size()) # code 11
+
+
 I added 3 versions:
 - the original (just pytorch fast but not sparse + mask) see https://github.com/OpenDrugAI/AttentiveFP
 - the DGL version which seems not converging as well as the original code see https://github.com/awslabs/dgl-lifesci
