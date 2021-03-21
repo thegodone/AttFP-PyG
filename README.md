@@ -10,6 +10,9 @@ I suspect that the error is in the atom softmax method that need to be per atom 
 something like this may work ?
 avu = EdgePooling.compute_edge_score_softmax(evu, edge_index[0], x_i.size()) # code 11
 
+it's based on this code:
+https://www.programcreek.com/python/?code=GraphNAS%2FGraphNAS%2FGraphNAS-master%2Fgraphnas_variants%2Fmacro_graphnas%2Fpyg%2Fpyg_gnn_layer.py
+
 
 I added 3 versions:
 - the original (just pytorch fast but not sparse + mask) see https://github.com/OpenDrugAI/AttentiveFP
